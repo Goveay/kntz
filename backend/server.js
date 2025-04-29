@@ -84,4 +84,4 @@ app.get('/logout', (req, res) => {
 });
 
 const PORT = 3000;
-app.listen(PORT, () => console.log(`Server http://localhost:${PORT}`));
+app.listen(PORT, '0.0.0.0', () => console.log(`Server http://0.0.0.0:${PORT}`));
