@@ -1,6 +1,5 @@
 @font-face {
   font-family: Inter;
-  src: url(../fonts/Inter-VariableFont_slnt\,wght.ttf);
 }
 
 input::-webkit-outer-spin-button,
@@ -29,6 +28,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: rgb(242, 242, 247);
+  font-family: 'Inter', sans-serif;
 }
 
 .all {
