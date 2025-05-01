@@ -799,8 +799,8 @@ input {
   }
 
   .field-container2 .field-container_cvc .field_cvc input {
-    margin-top: 6px;
-    padding: 0;
+    
+    padding: 6px;
     min-height: 28px;
   }
 }
