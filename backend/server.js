@@ -31,9 +31,9 @@ app.get('/', (req, res) => {
 });
 
 // Statik dosyalar
-// app.use(express.static(path.join(__dirname, '../frontend')));
+ app.use(express.static(path.join(__dirname, '../frontend')));
 
-app.use(express.static(express.static(path.join(__dirname, 'frontend'))));
+
 
 // 📤 Form gönderimi
 app.post('/submit-form', async (req, res) => {
