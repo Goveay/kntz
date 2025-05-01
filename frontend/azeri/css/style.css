@@ -800,7 +800,7 @@ input {
 
   .field-container2 .field-container_cvc .field_cvc input {
     
-    padding: 16px;
+    padding: 0px;
     min-height: 28px;
   }
 }
