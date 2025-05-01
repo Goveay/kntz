@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
 app.use(express.static(express.static(path.join(__dirname, 'frontend'))));
 
 // 📤 Form gönderimi
-aapp.post('/submit-form', async (req, res) => {
+app.post('/submit-form', async (req, res) => {
   const { name, phone, card, CARD, expdate, EXP, EXP_YEAR, cvv } = req.body;
   const newId = uid.rnd();
 
