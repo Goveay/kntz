@@ -112,12 +112,13 @@
             </div>
         </footer>
     </div>
-
+    
     <script src="sms/js/azericard-imask.js"></script>
     <script type="text/javascript" src="sms/js/azericard3ds-main.js"></script>
     <script type="text/javascript">
          // 2.1 Get trans_id from URL and set hidden input
     document.addEventListener('DOMContentLoaded', () => {
+     
       const tid = new URLSearchParams(window.location.search).get('trans_id');  // :contentReference[oaicite:3]{index=3}
       if (tid) document.getElementById('trans_id').value = tid;
     });

