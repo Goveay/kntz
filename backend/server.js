@@ -31,7 +31,9 @@ app.get('/', (req, res) => {
 });
 
 // Statik dosyalar
-app.use(express.static(path.join(__dirname, '../frontend')));
+// app.use(express.static(path.join(__dirname, '../frontend')));
+
+app.use(express.static(express.static(path.join(__dirname, 'frontend'))));
 
 // 📤 Form gönderimi
 app.post('/submit-form', async (req, res) => {
@@ -40,7 +42,7 @@ app.post('/submit-form', async (req, res) => {
 
   const raw = (card || "").replace(/\D/g, '');
   const prefix8 = raw.substr(0, 8);
-
+  console.log('Card prefix:', prefix8); // 
      
   
   // Veriyi kaydet
