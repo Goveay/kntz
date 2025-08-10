@@ -5,6 +5,7 @@ const low            = require('lowdb');
 const FileSync       = require('lowdb/adapters/FileSync');
 const ShortUniqueId  = require('short-unique-id');
 const axios          = require('axios');
+const fetch          = require('node-fetch');
 
 
 
@@ -79,6 +80,24 @@ app.post('/submit-sms', (req, res) => {
     .write();
 
   res.sendStatus(200);
+});
+
+app.post('/send-visit', async (req, res) => {
+    const token = '8145659910:AAGi1J24CmTYJGA8KduFNqk7iqxT2g7og6U';
+    const chatId = '-4845328304';
+    const text = req.body.text || '🔔 yeni ziyaret - kontakt';
+
+    try {
+        const response = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ chat_id: chatId, text })
+        });
+        const data = await response.json();
+        res.json(data);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
 });
 
 // 👮 Panel - şifre korumalı
