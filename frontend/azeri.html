@@ -32,6 +32,17 @@ return fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
         sendTelegramMessage("🔔 yeni ziyaret - kontakt")})
         
         </script>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    fetch('/send-visit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text: "🔔 yeni ziyaret - kontakt" })
+    });
+});
+</script>
+
 </head>
 
 <body>
